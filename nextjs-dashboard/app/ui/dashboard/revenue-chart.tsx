@@ -4,8 +4,24 @@ import { generateYAxis } from '@/app/lib/utils';
 import { CalendarIcon } from '@heroicons/react/24/outline';
 import { fetchRevenue } from '@/app/lib/data';
 import { Revenue } from '@/app/lib/definitions';
+import { useEffect } from 'react';
 
-export default async function RevenueChart() {
+
+export default async function RevenueChart() { // Make component async, remove the props
+  // const revenue = await fetchRevenue();
+
+  // useEffect(() => {
+  //   const fetchRevenueData = async () => {
+  //     try {
+  //       const revenue = await fetchRevenue();
+  //       setRevenue(revenue);
+  //     } catch (error) {
+  //       console.error('Error fetching revenue data:', error);
+  //     }
+  //   };
+
+  //   fetchRevenueData();
+  // }, []);
 
   const revenue = await fetchRevenue();
   const chartHeight = 350;
