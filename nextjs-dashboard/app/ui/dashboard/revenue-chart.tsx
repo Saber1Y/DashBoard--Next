@@ -7,7 +7,7 @@ import { Revenue } from '@/app/lib/definitions';
 import { useEffect } from 'react';
 
 
-export default async function RevenueChart() { // Make component async, remove the props
+export default async function RevenueChart() { 
   // const revenue = await fetchRevenue();
 
   // useEffect(() => {
